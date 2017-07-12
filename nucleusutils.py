@@ -107,6 +107,17 @@ def setEnableCache(hairSystemNode, flag):
     """
     pm.language.mel.eval("setCacheEnable {0} 0 {{\"{1}\"}};".format(flag, hairSystemNode.name()))
 
+def getEnableCache(hairSystemNode):
+    """
+    Check if the hair system cache is enabled.
+    :param hairSystemNode: `PyNode` target hair system node
+    :return: `bool` True if cache is enabled
+    """
+    cacheFiles = hairSystemNode.listHistory(type="cacheFile")
+    for cacheFile in cacheFiles:
+        if cacheFile.enable.get():
+            return True
+    return False
 
 def getSolver(targets=None):
     """

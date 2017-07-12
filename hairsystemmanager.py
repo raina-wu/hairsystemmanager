@@ -112,7 +112,8 @@ class HairSystemManagerUI(QWidget):
             cacheItem.setFlags(~Qt.ItemIsEditable)
             cacheItem.setTextAlignment(Qt.AlignCenter)
             if nucleusutils.hasCache(hairSystem):
-                cacheItem.setCheckState(Qt.Checked)
+                checkState = Qt.Checked if nucleusutils.getEnableCache(hairSystem) else Qt.Unchecked
+                cacheItem.setCheckState(checkState)
             else:
                 cacheItem.setCheckState(Qt.Unchecked)
                 cacheItem.setFlags(cacheItem.flags() & ~Qt.ItemIsEnabled)
