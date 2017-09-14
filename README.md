@@ -10,5 +10,5 @@ import hairsystemmanager
 hairsystemmanager.show()
 ```
 
-![HairSystemManager](http://oszfa13oq.bkt.clouddn.com/hairsystemmanager.png)  
+![HairSystemManager](http://oszfa13oq.bkt.clouddn.com/hairsystemmanager.png)     
 [demo video](https://vimeo.com/233767129)
